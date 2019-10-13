@@ -6,9 +6,12 @@ Created on Sat Oct 12 14:51:16 2019
 """
 #%%
 import numpy as np
+"""out is a row vector of true and false deciding sphere or cylinder"""
 out=santa[-1:]
+"""inp is Synthetic SP data of corresponding Spheres and Cylinders"""
 inp=santa[:-1]
 lr = 0.01
+""" Initialising Weights and Biases"""
 w1 = np.random.rand(69,69)*0.1
 b1 = np.zeros((69,1))
 w2 = np.random.rand(69,69)*0.1
@@ -26,6 +29,7 @@ b7 = np.zeros((10,1))
 w8 = np.random.rand(1,10)*0.1
 b8=np.zeros((1,1))
 for iterations in range(0,50):
+    """ Forward model"""
     x1 = np.add(np.dot(w1,inp),b1)
     z1 = np.tanh(x1)
     x2 = np.add(np.dot(w2,z1),b2)
@@ -42,6 +46,7 @@ for iterations in range(0,50):
     z7 = np.tanh(x7)
     x8 = np.add(np.dot(w8,z7),b8)
     z8 = np.divide(1,np.add(1,np.exp(-x8)))
+    """ Back Propagation"""
     dx8 = np.subtract(z8,out)
     dw8 = np.dot(dx8,np.transpose(z7))
     db8 = np.asmatrix(np.sum(dx8,axis=1))
@@ -73,6 +78,7 @@ for iterations in range(0,50):
     dx1 = np.multiply(dz1,np.square(np.divide(1,np.cosh(x1))))
     dw1 = np.dot(dx1,np.transpose(inp))
     db1 = np.reshape(np.asmatrix(np.sum(dx1,axis=1)),(69,1))
+    """ Updating the Parameters (weights and biases) """
     w8 = np.subtract(w8,np.multiply(lr,dw8))
     b8 = np.subtract(b8,np.multiply(lr,db8))
     w7 = np.subtract(w7,np.multiply(lr,dw7))
