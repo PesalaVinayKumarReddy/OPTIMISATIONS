@@ -5,7 +5,9 @@ Created on Sat Oct 12 23:43:48 2019
 @author: Vinay Reddy
 """
 #%%
+""" A Particle swarm optimisation program to find the global optimised solution for a given data set"""
 import numpy as np
+""" Initialising the required parameters like, polarisation Angle, Strength, location,depth"""
 K = np.random.rand(1,100)
 M = np.random.rand(1,100)*150;
 x0 = np.asmatrix(np.linspace(-3,3,100))
