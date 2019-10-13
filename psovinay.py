@@ -5,7 +5,7 @@ Created on Sat Oct 12 23:43:48 2019
 @author: Vinay Reddy
 """
 #%%
-""" A Particle swarm optimisation program to find the global optimised solution for a given data set"""
+""" A Particle swarm optimisation program with hundred particles to find the global optimised solution for a given data set """
 import numpy as np
 """ Initialising the required parameters like, polarisation Angle, Strength, location,depth"""
 K = np.random.rand(1,100)
@@ -17,6 +17,7 @@ x=np.asmatrix(np.linspace(-34,34,69))
 L=np.subtract(np.multiply(np.subtract(x,1),np.sin(np.pi/7)),np.multiply(18,np.cos(np.pi/7)))
 data = np.transpose(np.multiply(120,np.divide(L,np.add(np.square(np.subtract(x,1)),18**2))))
 F = np.zeros((69,100))
+""" initialising cognigent and social factors"""
 c1 = np.array([[1.],[0.01],[0.2],[0.1]])
 c2 = np.array([[1],[0.02],[0.3],[0.2]])
 mvaluebest=100000
@@ -36,10 +37,14 @@ for it in range(1,100):
     mi = np.argmin(F1)
     mvalue=F1[0][mi]
     if mvalue<mvaluebest:
+        """ finding the global best position attained by all particles and storing them in p"""
         pg = np.multiply(np.ones((4,100)),np.asmatrix(X[mi]))
         mvaluebest = mvalue
     logic = F1<F1best
+    """ finding the particles best position and storing them in p"""
     p = np.add(np.multiply(logic,X),np.multiply(np.subtract(1,logic),p))
     r=np.random.rand(1,2)
+    """ Finding the velocities of each Particle according to their cognigent and social factors"""
     V = V+np.multiply(r[0][0],np.multiply(c1,(p-X)))+np.multiply(r[0][1],np.multiply(c2,(pg-X)))
+    """ Updating the particles locations """
     X = X+V
