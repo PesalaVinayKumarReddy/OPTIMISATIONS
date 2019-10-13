@@ -7,13 +7,16 @@ Created on Fri Oct 11 23:25:24 2019
 #%%
 import numpy as np
 i=1
+""" field position"""
 x=np.linspace(-34,34,69)
+"""initialising the parameters of Spheres and inclined Sheets"""
 santa=np.zeros((70,14851))
 k=np.linspace(1,1001,11)
 z0=np.linspace(2,26,6)
 alpha=np.linspace(np.pi/20,np.pi/2,9)
 x0=np.linspace(-2,2,5)
 a=np.linspace(0.5,3,4)
+""" Creating a Data set for SPheres and Inclined Sheets"""
 for t1 in range(0,len(k)):
     for t2 in range(0,len(z0)):
         for t3 in range(0,len(alpha)):
