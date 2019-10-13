@@ -5,6 +5,9 @@ Created on Sat Oct 12 14:51:16 2019
 @author: Vinay Reddy
 """
 #%%
+"""A synthetic SP data of Sphere and inclined sheet are taken as input training data (inp in the program) 
+and an eight layered Artificial Neural Network is used to Classify spheres and inclined Sheets. 
+This program works equally good in classifying Spheres, Vertical Cylinders, Horizontal Cylinders, Inclined Sheets"""
 import numpy as np
 """out is a row vector of true and false deciding sphere or cylinder"""
 out=santa[-1:]
