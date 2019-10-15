@@ -6,7 +6,6 @@ Created on Mon Oct 14 10:46:56 2019
 """
 #%%
 import numpy as np
-import matplotlib.pyplot as plt
 learningrate=0.001
 x=np.asmatrix(np.linspace(-34,34,69))
 L=np.subtract(np.multiply(np.subtract(x,1),np.sin(np.pi/7)),np.multiply(18,np.cos(np.pi/7)))
