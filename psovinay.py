@@ -5,6 +5,10 @@ Created on Sat Oct 12 23:43:48 2019
 @author: Vinay Reddy
 """
 #%%
+""" 
+After classifying the data from the Neural Network to find the geometry of the body in the subsurface the earth, we do Particle Swarm Optimisation
+PSO is global optimisation technique, so we get the best fit parameters
+
 import numpy as np
 K = np.random.rand(1,100)
 M = np.random.rand(1,100)*150;
