@@ -7,6 +7,16 @@ Created on Fri Oct 11 23:25:24 2019
 #%%
 import numpy as np
 i=1
+"""
+x is a point on principle profile 
+santa is a data set of 14851 examples with profile data in columns from 1st row to 69th row and giving a binary classification in the 70th row
+binary classification('1' for inclined sheet profile data and '0' for horizontal cylinder profile data)
+k is multiplicative factor decides ampllitude 
+z0 is the depth of the body
+alpha is the angle of polarisation
+a is width of the sheet
+different types of sheets and cylinder data is produced and classified
+"""
 x=np.linspace(-34,34,69)
 santa=np.zeros((70,14851))
 k=np.linspace(1,1001,11)
