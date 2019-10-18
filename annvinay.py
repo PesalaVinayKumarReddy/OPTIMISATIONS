@@ -5,10 +5,22 @@ Created on Sat Oct 12 14:51:16 2019
 @author: Vinay Reddy
 """
 #%%
+""" 
+santa is matrix produced from the previous code synthetic
+outputs as out and input as inp 
+took learning rate as lr=0.01
+7 layers with tanh activation function and 1 layer of sigmoid activation function is used to train the model
+wi where i=1,2,3,... are weights of ith layer 
+bi where i=1,2,3,... are biases of ith layer
+took 50 iterations to train the model as the synthetic data is easier to train.
+"""
 import numpy as np
 out=santa[-1:]
 inp=santa[:-1]
 lr = 0.01
+"""
+random initialising weights and biases
+"""
 w1 = np.random.rand(69,69)*0.1
 b1 = np.zeros((69,1))
 w2 = np.random.rand(69,69)*0.1
@@ -26,6 +38,9 @@ b7 = np.zeros((10,1))
 w8 = np.random.rand(1,10)*0.1
 b8=np.zeros((1,1))
 for iterations in range(0,50):
+    """
+    forward propagation of the Neural Network Model
+    """
     x1 = np.add(np.dot(w1,inp),b1)
     z1 = np.tanh(x1)
     x2 = np.add(np.dot(w2,z1),b2)
@@ -42,6 +57,9 @@ for iterations in range(0,50):
     z7 = np.tanh(x7)
     x8 = np.add(np.dot(w8,z7),b8)
     z8 = np.divide(1,np.add(1,np.exp(-x8)))
+    """
+    back Propagation of the Neural Network Model
+    """
     dx8 = np.subtract(z8,out)
     dw8 = np.dot(dx8,np.transpose(z7))
     db8 = np.asmatrix(np.sum(dx8,axis=1))
@@ -73,6 +91,9 @@ for iterations in range(0,50):
     dx1 = np.multiply(dz1,np.square(np.divide(1,np.cosh(x1))))
     dw1 = np.dot(dx1,np.transpose(inp))
     db1 = np.reshape(np.asmatrix(np.sum(dx1,axis=1)),(69,1))
+    """"
+    Updating weights and biases to get the better Neural Network at each iteration
+    """
     w8 = np.subtract(w8,np.multiply(lr,dw8))
     b8 = np.subtract(b8,np.multiply(lr,db8))
     w7 = np.subtract(w7,np.multiply(lr,dw7))
