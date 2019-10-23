@@ -1,4 +1,4 @@
-# OPTIMISATION
+# OPTIMISATION TECHNIQUE to find the Parameters of the unknown Geometry from the principle profile data
 
 Auther:  "Pesala Vinay Kumar Reddy"
 
