@@ -12,7 +12,7 @@ psovinay.py
 
 SP Synthetic data (syntheticdata.py)
 ---
-   I prepared a Self Potential Synthetic data of inclined sheet and horizontal Cylinder and put them in a matrix 'santa'.
+   I prepared a Self Potential Synthetic data of inclined sheet and horizontal Cylinder and put them in a matrix 'santa'. santa is a training data set for ANN.
    
 * 'x' is a point on principle profile. 
 * 'santa' is a data sets of 14851 examples in rows with profile data in columns from 1st row to 69th row and giving a binary classification * ('1' for inclined sheet profile data and '0' for horizontal cylinder profile data) in the 70th row.
