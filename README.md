@@ -25,11 +25,13 @@ An Artificial Neural Network is programmed to classify Inclined Sheets and horiz
 
 The ANN is working properly with optimised hyperparameters. 
 
-Particle Swarm Optimisation
+Particle Swarm Optimisation (psovinay.py)
 ---
 
-After classifying the data from the Neural Network to find the geometry of the body in the subsurface the earth, we do Particle Swarm Optimisation.
-PSO is global optimisation technique, so we get the best fit parameters.
-It is started with 100 particles.
-We define a random initialisation of all parameters in the knnown range and find the synthetic data of that particular geometry found from ANN.
-Then from the use of Particle Swarm optimisation Algorithm we find the global best solution attained by all the particles which were randomly initialised.
+* After classifying the data from the Neural Network to find the geometry of the body in the subsurface the earth, we do Particle Swarm Optimisation.
+* PSO is global optimisation technique, so we get the best fit parameters.
+* It is started with 100 particles.
+* We define a random initialisation of all parameters in the knnown range and find the synthetic data of that particular geometry found from ANN.
+* Then from the use of Particle Swarm optimisation Algorithm we find the global best solution attained by all the particles which were randomly initialised.
+* All the particles posses different velocities at each iteration. These velocities are defined by global best found at the moment and the individual particle best found at the moment.
+* Therefore in the end Some of the particles end up near to the global best parameters and a few particles end up in local best parameters fit.
