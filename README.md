@@ -1,5 +1,13 @@
 # OPTIMISATION
 
+Auther:  "Pesala Vinay Kumar Reddy"
+
+Files
+---
+syntheticdata.
+annvinay.py
+psovinay.py
+
 SP Synthetic data (syntheticdata.py)
 ---
    I prepared a Self Potential Synthetic data of inclined sheet and horizontal Cylinder and put them in a matrix 'santa'.
@@ -36,3 +44,10 @@ Particle Swarm Optimisation (psovinay.py)
 * All the particles posses different velocities at each iteration. These velocities are defined by global best found at the moment and the individual particle best found at the moment.
 * Therefore in the end Some of the particles end up near to the global best parameters and a few particles end up in local best parameters fit.
 * Thus we find global best parameters of the data provided.
+
+# Short comings
+
+* Did not apply for Real Field data.
+* ANN program is written to classify for only two diffwrent types of models Where it can be written for spheres, vertical cylinders as well
+* Inputs in ANN is not scaled.
+* Hyper Parameters of ANN are optimised manually.
