@@ -130,3 +130,4 @@ x7 = np.add(np.dot(w7,z6),b7)
 z7 = np.tanh(x7)
 x8 = np.add(np.dot(w8,z7),b8)
 z8 = np.divide(1,np.add(1,np.exp(-x8)))
+"""
