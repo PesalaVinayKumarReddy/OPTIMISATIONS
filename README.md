@@ -10,3 +10,6 @@ SP Synthetic data (syntheticdata.py)
 'alpha' is the angle of polarisation.
 'a' is width of the sheet.
 Thus different types of inclined sheets and horizontal cylinder data are produced and classified.
+
+Artificial Neural Network
+---
