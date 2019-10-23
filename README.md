@@ -4,8 +4,10 @@ Auther:  "Pesala Vinay Kumar Reddy"
 
 Files
 ---
-syntheticdata.
+syntheticdata.py
+
 annvinay.py
+
 psovinay.py
 
 SP Synthetic data (syntheticdata.py)
