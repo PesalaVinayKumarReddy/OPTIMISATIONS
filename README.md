@@ -24,3 +24,12 @@ An Artificial Neural Network is programmed to classify Inclined Sheets and horiz
 * took 50 iterations to train the model as the synthetic data is easier and faster to train.
 
 The ANN is working properly with optimised hyperparameters. 
+
+Particle Swarm Optimisation
+---
+
+After classifying the data from the Neural Network to find the geometry of the body in the subsurface the earth, we do Particle Swarm Optimisation.
+PSO is global optimisation technique, so we get the best fit parameters.
+It is started with 100 particles.
+We define a random initialisation of all parameters in the knnown range and find the synthetic data of that particular geometry found from ANN.
+Then from the use of Particle Swarm optimisation Algorithm we find the global best solution attained by all the particles which were randomly initialised.
