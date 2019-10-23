@@ -110,3 +110,23 @@ for iterations in range(0,50):
     b2 = np.subtract(b2,np.multiply(lr,db2))
     w1 = np.subtract(w1,np.multiply(lr,dw1))
     b1 = np.subtract(b1,np.multiply(lr,db1))
+""" 
+Once the ANN is trained for few hours
+then give a data to the program below to find whether the body is an Inclined Sheet or a Horizontal cylinder
+Where 'data' is a matrix of 69 rows and 1 column ( data of Inclined Sheet or Horizontal Cylinder over the principle profile)
+x1 = np.add(np.dot(w1,data),b1)
+z1 = np.tanh(x1)
+x2 = np.add(np.dot(w2,z1),b2)
+z2 = np.tanh(x2)
+x3 = np.add(np.dot(w3,z2),b3)
+z3 = np.tanh(x3)
+x4 = np.add(np.dot(w4,z3),b4)
+z4 = np.tanh(x4)
+x5 = np.add(np.dot(w5,z4),b5)
+z5 = np.tanh(x5)
+x6 = np.add(np.dot(w6,z5),b6)
+z6 = np.tanh(x6)
+x7 = np.add(np.dot(w7,z6),b7)
+z7 = np.tanh(x7)
+x8 = np.add(np.dot(w8,z7),b8)
+z8 = np.divide(1,np.add(1,np.exp(-x8)))
