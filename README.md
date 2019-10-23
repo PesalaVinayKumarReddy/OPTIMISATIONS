@@ -1,6 +1,6 @@
 # OPTIMISATION
 
-Synthetic data
+SP Synthetic data (syntheticdata.py)
 ---
    I prepared a Self Potential Synthetic data of inclined sheet and horizontal Cylinder and put them in a matrix 'santa'.
 'x' is a point on principle profile. 
