@@ -12,6 +12,7 @@ x is a point on principle profile
 santa is a data set of 14851 examples with profile data in columns from 1st row to 69th row and giving a binary classification in the 70th row
 binary classification('1' for inclined sheet profile data and '0' for horizontal cylinder profile data)
 k is multiplicative factor decides ampllitude 
+x0 is the location at which the body is present on the principle profile
 z0 is the depth of the body
 alpha is the angle of polarisation
 a is width of the sheet
