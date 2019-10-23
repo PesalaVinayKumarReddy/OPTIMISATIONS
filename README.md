@@ -53,3 +53,4 @@ Particle Swarm Optimisation (psovinay.py)
 * ANN program is written to classify for only two diffwrent types of models Where it can be written for spheres, vertical cylinders as well
 * Inputs in ANN is not scaled.
 * Hyper Parameters of ANN are optimised manually.
+* Particle Swarm Optimisation Program is written only for Horizontal Cylinder.
