@@ -35,3 +35,4 @@ Particle Swarm Optimisation (psovinay.py)
 * Then from the use of Particle Swarm optimisation Algorithm we find the global best solution attained by all the particles which were randomly initialised.
 * All the particles posses different velocities at each iteration. These velocities are defined by global best found at the moment and the individual particle best found at the moment.
 * Therefore in the end Some of the particles end up near to the global best parameters and a few particles end up in local best parameters fit.
+* Thus we find global best parameters of the data provided.
