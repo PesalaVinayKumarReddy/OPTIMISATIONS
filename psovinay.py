@@ -12,6 +12,14 @@ It is started with 100 particles
 """
 import numpy as np
 import math
+"""
+M is multiplicative factor decides ampllitude is randomised between 0 and 150
+K is 'sin(alpha)' randomised in between 0 and 1
+x0 is the location at which the body is present on the principle profile randomised between -3 and 3
+z0 is the depth of the body randomised between 1 and 30
+alpha is the angle of polarisation
+Here 'data' matrix is created synthetic 
+"""
 K = np.random.rand(1,100)
 M = np.random.rand(1,100)*150;
 x0 = np.asmatrix(np.linspace(-3,3,100))
@@ -79,6 +87,6 @@ x00=np.array(pg[2,[0]])[0][0]
 z00=np.array(pg[3,[0]])[0][0]
 print("multiplicative factor = ",m11)
 print("angle of polarisation in radians = ",k11)
-print("position of the sphere",x00)
-print("depth of the sphere",z00)
+print("position of the sphere= ",x00)
+print("depth of the sphere= ",z00)
     
