@@ -12,6 +12,7 @@ It is started with 100 particles
 """
 import numpy as np
 import math
+import matplotlib.pyplot as plt
 """
 M is multiplicative factor decides ampllitude is randomised between 0 and 150
 K is 'sin(alpha)' randomised in between 0 and 1
@@ -47,6 +48,7 @@ p=np.zeros((4,100))
 Random initialisation of velocities
 """
 V=np.random.rand(4,100)*0.01
+cost=np.zeros((99))
 for it in range(1,100):
     M=X[:1]
     K=np.asmatrix(X[1])
@@ -80,6 +82,7 @@ for it in range(1,100):
     """
     V = V+np.multiply(r[0][0],np.multiply(c1,(p-X)))+np.multiply(r[0][1],np.multiply(c2,(pg-X)))
     X = X+V
+    cost[it-1] = mvaluebest
 m11=np.array(pg[0,[0]])[0][0]
 k11=np.array(pg[1,[0]])[0][0]
 k11=math.asin(k11)
