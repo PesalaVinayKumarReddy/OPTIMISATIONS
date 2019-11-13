@@ -47,10 +47,17 @@ for i in range(0,10000):
     M=M+dM*learningrate*500
     K=K+dK*learningrate*0.3
     cost[i]=F1
-plt.plot(F)
-plt.plot(data)
+plt.plot(F,label="result")
+plt.plot(data,label="data")
+plt.xlabel('Principle profile')
+plt.ylabel('SP(mV)')
+plt.title('plot of SP field data and computed data')
+plt.legend()
 plt.show()
 plt.plot(cost)
+plt.xlabel('iterations')
+plt.ylabel('misfit')
+plt.title('cost function vs iterations')
 plt.show()
 print("multiplicative factor = ",M)
 print("angle of polarisation in radians = ",K)
