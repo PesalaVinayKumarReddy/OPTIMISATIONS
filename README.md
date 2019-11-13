@@ -2,6 +2,8 @@
 
 Auther:  "Pesala Vinay Kumar Reddy"
 
+licensed under [MIT License](LICENSE)
+
 Files
 ---
 syntheticdata.py
