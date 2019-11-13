@@ -6,11 +6,11 @@ licensed under [MIT License](LICENSE)
 
 Files
 ---
-syntheticdata.py
+[syntheticdata](syntheticdata.py)
 
-annvinay.py
+[ANN](annvinay.py)
 
-psovinay.py
+[Particle Swarm Optimisation](psovinay.py)
 
 SP Synthetic data (syntheticdata.py)
 ---
