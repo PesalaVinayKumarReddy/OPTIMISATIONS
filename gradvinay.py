@@ -11,11 +11,12 @@ learningrate=0.001
 x=np.asmatrix(np.linspace(-34,34,69))
 L=np.subtract(np.multiply(np.subtract(x,1),np.sin(np.pi/7)),np.multiply(18,np.cos(np.pi/7)))
 data = np.transpose(np.multiply(120,np.divide(L,np.add(np.square(np.subtract(x,1)),18**2))))
-M=119.99995139785717
-K=0.4607158569739635
+M=110.99995139785717
+K=0.5607158569739635
 x0=1.7559713848807337
-z0=18.677372743366423
-for i in range(0,100):
+z0=15.677372743366423
+cost = np.zeros((10000))
+for i in range(0,10000):
     L1=np.transpose(x)-np.multiply(x0,np.ones((69,1)))
     L1=np.subtract(np.multiply(L1,K),np.multiply(z0,np.sqrt(np.subtract(1,np.square(K)))))
     L2=np.add(np.square(np.transpose(x)-np.multiply(x0,np.ones((69,1)))),np.square(z0))
@@ -40,7 +41,18 @@ for i in range(0,100):
     dz03=np.divide(-(det3),det)
     dz0=np.multiply(M,dz01+dz02+dz03)
     dz0=np.dot(dz0,data-F)/69
-    z0=z0-dz0*learningrate*1
-    x0=x0-dx0*learningrate*100
-    M=M-dM*learningrate*0.1
-    K=K-dK*learningrate*0.1
+    z0=z0+dz0*learningrate*30000
+    x0=x0-dx0*learningrate*45
+    """check above step"""
+    M=M+dM*learningrate*500
+    K=K+dK*learningrate*0.3
+    cost[i]=F1
+plt.plot(F)
+plt.plot(data)
+plt.show()
+plt.plot(cost)
+plt.show()
+print("multiplicative factor = ",M)
+print("angle of polarisation in radians = ",K)
+print("position of the sphere",x0)
+print("depth of the sphere",z0)
