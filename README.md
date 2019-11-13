@@ -12,6 +12,8 @@ Files
 
 [Particle Swarm Optimisation](psovinay.py)
 
+[Gradient Descent algorithm](gradvinay.py)
+
 SP Synthetic data (syntheticdata.py)
 ---
    I prepared a Self Potential Synthetic data of inclined sheet and horizontal Cylinder and put them in a matrix 'santa'. santa is a training data set for ANN.
