@@ -1,6 +1,6 @@
 # OPTIMISATION TECHNIQUE to find the Parameters of the unknown Geometry from the principle profile data
 
-Auther:  "Pesala Vinay Kumar Reddy"
+Auther:  "Devendra Mishra"
 
 licensed under [MIT License](LICENSE)
 
